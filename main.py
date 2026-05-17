@@ -13,7 +13,7 @@ class Vertex:
         c = input(" > ")
         if c == 'inspect':
             print(f"{self.secret}\n")
-            self.visit()
+            self.desc = f"{self.desc}\n{self.secret}"
         elif c in self.edges:
             self.edges[c].visit()
         else:
