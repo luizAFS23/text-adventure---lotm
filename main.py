@@ -1,4 +1,8 @@
 import time
+import sys
+
+if sys.gettrace() is not None:
+    time.sleep = lambda x: None
 
 
 class Historia:
@@ -71,6 +75,8 @@ if __name__ == "__main__":
 
                 print("---------------------------------------------------------")
                 print("Você examina o revolver e percebe que ele está com uma bala a menos no tambor. O cano da arma ainda fervente, o que indica que o suicído deste corpo foi recente.\n")
+                time.sleep(7)
+                print("\x1B[3m'Com a situação da família de Klein, como que eles poderiam ter um revolver desses?'\x1B[0m, você pensa consigo mesmo.\n")
                 state_option1 = input(f'que você faz ({historia.gerar_menu()})? > ')
                 if state_option1.lower() == "procurar por pistas no quarto":
                     state_parte1 = "procurar por pistas no quarto"
@@ -90,7 +96,7 @@ if __name__ == "__main__":
                 print("---------------------------------------------------------")
                 print("Como graduando do Departamento de História, Klein estudou línguas antigas, com foco especial em Feysac antigo, a língua que originou todas as línguas no Continente do Norte, e a língua Hermes, muito vista em mausoléus relacionados a rituais e rezas...\n")
                 time.sleep(12)
-                print("Ao abrir o livro, você imediatamente percebe que o mesmo está escrito na língua Hermes!\n")
+                print("Ao abrir o livro usando o conhecimento de Klein, você imediatamente percebe que o mesmo está escrito na língua Hermes!\n")
                 time.sleep(5)
                 print('O texto em tinta preta diz: "Todos irão morrer, incluindo eu."\n')
                 time.sleep(5)
@@ -108,7 +114,7 @@ if __name__ == "__main__":
 
                 print("---------------------------------------------------------")
                 print("Você institivamente lança o olhar ao espelho do quarto, e a figura que aparece refletida quase lhe faz gritar. É o rosto de seu corpo, com uma ferida horrenda na região das têmporas. Qualquer pessoa com uma ferida dessas certamente não seria capaz de continuar vivo.\n")
-                print("Contudo, você percebe que a ferida está se regenerando. Se regenrando rápido. Aos poucos, ")
+                print("Contudo, você percebe que a ferida está se regenerando. Se regenerando rápido. Aos poucos, a ferida profunda acaba se ")
                 state_option2 = input("sair do quarto)? > ")
                 if state_option2.lower() == "sair do quarto":
                     state_parte1 = "sair do quarto"
